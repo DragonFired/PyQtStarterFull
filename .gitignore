@@ -199,3 +199,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+/.PyQtStarterSavedObjects.pl
+/PyQtStarterResources_rc.py
