@@ -123,7 +123,7 @@ class PyQtStarter(QMainWindow):
 
     def pushButtonClickedHandler(self):
         print("Inside pushButtonClickedHandler()\n")
-        if (self.textOutput != "Hello World!" or self.textOutput == ""):
+        if self.textOutput != "Hello World!" or self.textOutput == "":
             self.textOutput = "Hello World!"
         else:
             self.textOutput = "Happy to Meet You."
@@ -155,8 +155,9 @@ class PyQtStarter(QMainWindow):
                 self.quitCounter = 0
                 event.ignore()
 
+
 class PreferencesDialog(QDialog):
-    def __init__(self, parent = PyQtStarter):
+    def __init__(self, parent=PyQtStarter):
         super(PreferencesDialog, self).__init__()
 
         uic.loadUi('preferencesDialog.ui', self)
@@ -246,6 +247,7 @@ class PreferencesDialog(QDialog):
     # @pyqtSlot()
     def cancelClickedHandler(self):
         self.close()
+
 
 if __name__ == "__main__":
     QCoreApplication.setOrganizationName("Fireheart Software");
